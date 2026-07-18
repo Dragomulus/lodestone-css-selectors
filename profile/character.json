@@ -64,10 +64,10 @@
     },
     "GRAND_COMPANY": {
         "selector": "div.character-block:nth-child(4) > div:nth-child(2) > p:nth-child(2)",
-        "regex": "(?P<Name>\\S*) \/ (?P<Rank>.*)",
+        "regex": "(?P<GrandCompanyName>\\S*) \/ (?P<GrandCompanyRank>.*)",
         "type": {
-          "Name": "string",
-          "Rank": "sting"
+          "GrandCompanyName": "string",
+          "GrandCompanyRank": "string"
         }
     },
     "GUARDIAN_DEITY": {

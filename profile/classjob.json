@@ -1,24 +1,24 @@
 {
     "BOZJA": {
         "LEVEL": {
-            "selector": "div.character__job__list:nth-child(7) > div:nth-child(2)",
+            "selector": "div.character__job__list:nth-child(9) > div:nth-child(2)",
             "type": "integer"
         },
         "METTLE": {
-            "selector": "div.character__job__list:nth-child(7) > div:nth-child(4)",
+            "selector": "div.character__job__list:nth-child(9) > div:nth-child(4)",
             "regex": "(?P<Mettle>\\S+) \\/",
             "type": {
               "Mettle": "string"
             }
         },
         "NAME": {
-            "selector": "div.character__job__list:nth-child(7) > div:nth-child(3)",
+            "selector": "div.character__job__list:nth-child(9) > div:nth-child(3)",
             "type": "string"
         }
     },
     "EUREKA": {
         "EXP": {
-            "selector": "div.character__job__list:nth-child(9) > div:nth-child(4)",
+            "selector": "div.character__job__list:nth-child(7) > div:nth-child(4)",
             "regex": "(?P<CurrentEXP>\\S+) \\/ (?P<MaxEXP>\\S+)",
             "type": {
               "CurrentEXP": "integer",
@@ -26,11 +26,11 @@
             }
         },
         "LEVEL": {
-            "selector": "div.character__job__list:nth-child(9) > div:nth-child(2)",
+            "selector": "div.character__job__list:nth-child(7) > div:nth-child(2)",
             "type": "integer"
         },
         "NAME": {
-            "selector": "div.character__job__list:nth-child(9) > div:nth-child(3)",
+            "selector": "div.character__job__list:nth-child(7) > div:nth-child(3)",
             "type": "string"
         }
     },
@@ -279,6 +279,24 @@
         },
         "EXP": {
             "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(6) > div:nth-child(4)",
+            "regex": "(?P<CurrentEXP>\\S+) \\/ (?P<MaxEXP>\\S+)",
+            "type": {
+              "CurrentEXP": "integer",
+              "MaxEXP": "integer"
+            }
+        }
+    },
+    "BEASTMASTER": {
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(7) > div:nth-child(2)",
+            "type": "integer"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(7) > div:nth-child(3)",
+            "type": "string"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(7) > div:nth-child(4)",
             "regex": "(?P<CurrentEXP>\\S+) \\/ (?P<MaxEXP>\\S+)",
             "type": {
               "CurrentEXP": "integer",
@@ -626,6 +644,58 @@
               "CurrentEXP": "integer",
               "MaxEXP": "integer"
             }
+        }
+    },
+    "OCCULTCRESCENT": {
+        "LEVEL": {
+            "selector": "div.character__job__list:nth-child(11) > div:nth-child(2)",
+            "type": "integer"
+        },
+        "EXP": {
+            "selector": "div.character__job__list:nth-child(11) > div:nth-child(4)",
+            "regex": "(?P<CurrentEXP>\\S+) \\/ (?P<MaxEXP>\\S+)",
+            "type": {
+              "CurrentEXP": "integer",
+              "MaxEXP": "integer"
+            }
+        },
+        "NAME": {
+            "selector": "div.character__job__list:nth-child(11) > div:nth-child(3)",
+            "type": "string"
+        }
+    },
+    "PHANTOM_JOBS": {
+        "ROOT": {
+            "selector": ".character__support_job__list > li",
+            "multiple": true
+        },
+        "NAME": {
+            "selector": ".character__support_job__name",
+            "type": "string"
+        },
+        "LEVEL": {
+            "selector": ".character__support_job__level",
+            "regex": "Lv\\. (?P<Level>\\d+)",
+            "type": {
+                "Level": "integer"
+            }
+        },
+        "EXP": {
+            "selector": ".character__support_job__exp",
+            "regex": "(?P<CurrentEXP>[\\d,]+) \\/ (?P<MaxEXP>[\\d,]+)",
+            "type": {
+                "CurrentEXP": "integer",
+                "MaxEXP": "integer"
+            }
+        },
+        "ICON": {
+            "selector": ".character__support_job__icon img",
+            "attribute": "src",
+            "type": "string"
+        },
+        "MASTERED": {
+            "selector": ".character__support_job__master",
+            "type": "boolean"
         }
     }
 }
