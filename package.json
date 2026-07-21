@@ -1,0 +1,6 @@
+{
+  "name": "lodestone-css-selectors",
+  "version": "0.52.2",
+  "description": "CSS selectors for The Lodestone",
+  "main": "meta.json"
+}
